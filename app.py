@@ -2,8 +2,11 @@ from flask import Flask, request, jsonify, Response
 from transformers import pipeline
 from flask_cors import CORS
 from expense_advisor import ExpenseAdvisor 
+import torch
 
 # Initialize Flask app
+device = 0 if torch.cuda.is_available() else -1  # Utiliser 0 pour le GPU, -1 pour CPU
+print(torch.cuda.is_available())
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*", "methods": ["GET", "POST", "OPTIONS"], "allow_headers": ["Content-Type", "Authorization"]}})
 
