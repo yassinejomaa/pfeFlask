@@ -77,7 +77,7 @@ def predict_expense(input1, input2, input3, input4):
     # Print and Return the response
     print("the predicted Expenses is:", prediction)
     response = {
-        'prediction': prediction.tolist()
+        'expense_prediction': prediction.tolist()
     }
     return jsonify(response)
 if __name__ == "__main__":
