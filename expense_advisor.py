@@ -12,7 +12,7 @@ class ExpenseAdvisor:
             {"role": "system", "content": "Here is a breakdown of my current expenses. Based on this, can you give me recommendations to help me save money."},
             {"role": "user", "content": (
                 f"My recent expenses are:\n" + "\n".join(f"- {expense}" for expense in expenses) +
-                "\nPlease give me customized financial advice based on this information and never mention about any budgeting apps and the response in the form of html started from the body balise and give me only recomendation dont generate anything else in your rsponse and i want the response to be well structred because i will visualise it directly on my website write the expense then the recomandation of it and make the same style for all expenses"
+                "\nPlease give me customized financial advice based on this information and never mention about any budgeting apps and the response in the form of html started from the body balise and give me only recomendation dont generate anything else in your rsponse and i want the response to be well structred because i will visualise it directly on my website write the expense then the recomandation of it and make the same style for all expenses don't use table"
 )}]
         return messages
     
